@@ -5,12 +5,12 @@ if want to insert convert content to a template html file, just provide the temp
 
 ## Install
 ```bash
-npm install --save-dev markdown-webpack-plugin
+npm install --save-dev markdown-html-webpack-plugin
 ```
 
 ## Usage
 ```js
-const markdownPlugin = require('markdown-webpack-plugin');
+const markdownPlugin = require('markdown-html-webpack-plugin');
 
 module.exports = {
   

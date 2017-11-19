@@ -1,14 +1,14 @@
 {
-  "name": "markdown-webpack-plugin",
-  "version": "1.0.1",
-  "description": "markdown-webpack-plugin",
+  "name": "markdown-html-webpack-plugin",
+  "version": "1.0.0",
+  "description": "markdown-html-webpack-plugin",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/KingZhang/markdown-webpack-plugin.git"
+    "url": "git+https://github.com/KingZhang/markdown-html-webpack-plugin.git"
   },
   "keywords": [
     "filelist",
@@ -18,9 +18,9 @@
   "author": "KingZhang",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/KingZhang/markdown-webpack-plugin/issues"
+    "url": "https://github.com/KingZhang/markdown-html-webpack-plugin/issues"
   },
-  "homepage": "https://github.com/KingZhang/markdown-webpack-plugin#readme",
+  "homepage": "https://github.com/KingZhang/markdown-html-webpack-plugin#readme",
   "dependencies": {
     "marked": "^0.3.6"
   }
