@@ -4,6 +4,7 @@ var marked = require('marked');
 
 var rootPath = path.resolve(__dirname, '..');
 var mdReg = /\.md$/g;
+var isEncodeName = false;
 
 /**
  * function to convert markdown to html file
@@ -22,13 +23,21 @@ function generateHTML(dir, exportPath, templateContent, parentDir, parentPath) {
     files.forEach(file => {
         var filePath = path.join(dir, file);
         if (fs.statSync(filePath).isDirectory()) {
+            try {
+                fs.mkdirSync(generatePath);
+            } catch (e) {
+            }
             generateHTML(filePath, exportPath, templateContent, dir, currentFolder);
         } else {
+            if(isEncodeName) {
+                file = encodeURI(file);
+            }
             let generateFile = path.join(generatePath, file.replace(mdReg, ".html"));
 
             try {
                 fs.mkdirSync(generatePath);
-            } catch (e) {}
+            } catch (e) {
+            }
 
             if(mdReg.test(file)) {
                 // if markdown file, convert to html
@@ -54,6 +63,7 @@ function generateHTML(dir, exportPath, templateContent, parentDir, parentPath) {
 function MarkdownPlugin(options) {
     this.filePath = path.join(rootPath, options.filePath);
     this.exportPath = options.exportPath;
+    isEncodeName = options.isEncodeName;
 
     if(options.template) {
         this.templateContent = fs.readFileSync(path.join(rootPath, options.template), { encoding: "utf8" });

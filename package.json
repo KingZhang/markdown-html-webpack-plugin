@@ -1,6 +1,6 @@
 {
   "name": "markdown-html-webpack-plugin",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "markdown-html-webpack-plugin",
   "main": "index.js",
   "scripts": {

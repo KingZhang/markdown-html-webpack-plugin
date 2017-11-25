@@ -18,6 +18,7 @@ module.exports = {
     new markdownPlugin({
         filePath: '../inputPath',
         exportPath: '../public/outPath/',
+        isEncodeName: false, // if need to encode file name, like chinese
         template: 'template.html'
       }),
   ]
